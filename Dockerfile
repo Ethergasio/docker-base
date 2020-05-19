@@ -8,4 +8,8 @@ RUN apt-get update -y \
   python3.6 python3-pip \
   && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+RUN apt-get update -y \
+  && apt-get install -y python3-setuptools \
+  && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
 CMD ["/bin/bash"]
